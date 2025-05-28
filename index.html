@@ -41,12 +41,56 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      animation: rainbowText 8s linear infinite;
+      animation:
+        slideFade 0.9s ease-out forwards,
+        rainbowText 8s linear infinite;
       margin: 0;
     }
 
     p {
       color: white;
+      animation: slideFade 0.9s ease-out forwards;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .6rem 1.2rem;
+      background: #ff8;
+      color: #000;
+      border-radius: 8px;
+      transition: background 0.3s;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background: #ffc400;
+    }
+
+    section {
+      width: 80%;
+      max-width: 600px;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .profile {
+      background: #fff3;
+    }
+
+    .works {
+      background: #0003;
+    }
+
+    .emoji {
+      font-size: 3rem;
+    }
+
+    .vertical {
+      writing-mode: vertical-rl;
+      margin: 0;
     }
 
     @keyframes gradientBG {
@@ -59,10 +103,37 @@
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
+
+    @keyframes slideFade {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
   <h1>朱雀のホームページにようこそ</h1>
   <p>好きなAIは ChatGPT です。</p>
+  <a href="#" class="btn">お問い合わせ</a>
+
+  <section class="profile">
+    <h2>プロフィール</h2>
+    <figure>
+      <span class="emoji">🎨</span>
+      <figcaption>デザインが好き</figcaption>
+    </figure>
+    <h3 class="vertical">趣味</h3>
+    <p>こんにちは、ウェブデザインとイラストを学ぶ朱雀です。</p>
+  </section>
+
+  <section class="works">
+    <h2>最近の作品</h2>
+    <p>ここに最新のプロジェクトやサンプル作品を紹介します。</p>
+  </section>
 </body>
 </html>
