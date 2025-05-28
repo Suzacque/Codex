@@ -6,7 +6,16 @@
   <title>朱雀のホームページ</title>
   <style>
     body {
-      background-color: #f5f5f5;
+      background: linear-gradient(270deg,
+        #ff0000,
+        #ffa500,
+        #ffff00,
+        #008000,
+        #0000ff,
+        #4b0082,
+        #ee82ee);
+      background-size: 1400% 1400%;
+      animation: gradientBG 60s linear infinite;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -15,6 +24,41 @@
       margin: 0;
       font-family: sans-serif;
       text-align: center;
+      color: white;
+    }
+
+    h1 {
+      background: linear-gradient(270deg,
+        #ff0000,
+        #ffa500,
+        #ffff00,
+        #008000,
+        #0000ff,
+        #4b0082,
+        #ee82ee);
+      background-size: 1400% 1400%;
+      animation: gradientText 60s linear infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      margin: 0;
+    }
+
+    p {
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
