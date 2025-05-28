@@ -6,15 +6,21 @@
   <title>虹色アニメーションデモ</title>
   <style>
     body {
-      background:
-        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 60%),
-        radial-gradient(circle at 70% 20%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 55%),
-        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 60%),
-        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 55%),
-        linear-gradient(135deg, #ffd1ff, #ffe6ff, #ffffff);
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, purple, red);
+      background-size: 400% 100%;
+      animation: bgRainbow 15s linear infinite;
       font-family: sans-serif;
       text-align: center;
       padding-top: 2rem;
+    }
+
+    @keyframes bgRainbow {
+      from {
+        background-position: 0% 0;
+      }
+      to {
+        background-position: -400% 0;
+      }
     }
 
     h1 {
