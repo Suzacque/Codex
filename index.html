@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>朱雀のホームページ</title>
+  <title>虹色アニメーションのホームページ</title>
   <style>
     body {
       background: linear-gradient(90deg,
@@ -36,12 +36,12 @@
         #0000ff,
         #4b0082,
         #ee82ee);
-      background-size: 1400% 1400%;
-      animation: gradientText 60s linear infinite;
+      background-size: 200% auto;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+      animation: rainbowText 8s linear infinite;
       margin: 0;
     }
 
@@ -55,10 +55,9 @@
       100% { background-position: 0% 50%; }
     }
 
-    @keyframes gradientText {
+    @keyframes rainbowText {
       0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
   </style>
 </head>
